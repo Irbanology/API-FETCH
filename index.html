@@ -3,331 +3,191 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HAMIRB | Coming Soon</title>
+<title>My Dearest ❤️</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
 
 <style>
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins,sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-background:#f7f9fc;
-color:#111827;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+    background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+    font-family:'Poppins',sans-serif;
 }
 
-nav{
-width:90%;
-max-width:1200px;
-margin:auto;
-padding:25px 0;
-display:flex;
-justify-content:space-between;
-align-items:center;
+.container{
+    width:100%;
+    max-width:760px;
 }
 
-.logo{
-font-size:30px;
-font-weight:700;
-letter-spacing:3px;
-color:#2563eb;
+.letter{
+    background:#fff;
+    border-radius:25px;
+    padding:45px;
+    box-shadow:0 20px 60px rgba(0,0,0,.18);
+    position:relative;
+    overflow:hidden;
 }
 
-nav ul{
-display:flex;
-gap:30px;
-list-style:none;
+.letter::before{
+    content:"❤";
+    position:absolute;
+    top:-30px;
+    right:-20px;
+    font-size:180px;
+    color:rgba(255,105,135,.08);
+    transform:rotate(-15deg);
 }
 
-nav a{
-text-decoration:none;
-color:#475569;
-font-weight:500;
-transition:.3s;
+.title{
+    font-family:'Great Vibes',cursive;
+    font-size:52px;
+    color:#e63946;
+    text-align:center;
+    margin-bottom:30px;
 }
 
-nav a:hover{
-color:#2563eb;
+.message{
+    font-size:17px;
+    color:#555;
+    line-height:2;
 }
 
-.hero{
-width:90%;
-max-width:1200px;
-margin:auto;
-display:flex;
-align-items:center;
-justify-content:space-between;
-min-height:80vh;
-gap:60px;
+.message p{
+    margin-bottom:22px;
 }
 
-.left{
-flex:1;
+.highlight{
+    color:#d62839;
+    font-weight:600;
 }
 
-.badge{
-display:inline-block;
-padding:10px 18px;
-background:#dbeafe;
-color:#2563eb;
-border-radius:50px;
-font-size:14px;
-font-weight:600;
-margin-bottom:20px;
+.signature{
+    margin-top:45px;
 }
 
-h1{
-font-size:55px;
-line-height:1.15;
-margin-bottom:20px;
+.signature h3{
+    font-family:'Great Vibes',cursive;
+    font-size:38px;
+    color:#e63946;
+    margin-bottom:8px;
 }
 
-p{
-font-size:18px;
-color:#64748b;
-line-height:1.8;
-margin-bottom:35px;
+.signature p{
+    color:#555;
+    margin:4px 0;
 }
 
-.buttons{
-display:flex;
-gap:15px;
-flex-wrap:wrap;
+.footer{
+    margin-top:35px;
+    text-align:center;
+    font-size:30px;
+    color:#ff4d6d;
+    animation:heartbeat 1.6s infinite;
 }
 
-.btn{
-padding:15px 28px;
-border-radius:10px;
-text-decoration:none;
-font-weight:600;
-transition:.3s;
+@keyframes heartbeat{
+    0%{transform:scale(1);}
+    25%{transform:scale(1.15);}
+    50%{transform:scale(1);}
+    75%{transform:scale(1.15);}
+    100%{transform:scale(1);}
 }
 
-.primary{
-background:#2563eb;
-color:white;
-box-shadow:0 10px 25px rgba(37,99,235,.25);
+@media(max-width:600px){
+
+.title{
+    font-size:42px;
 }
 
-.primary:hover{
-transform:translateY(-3px);
+.letter{
+    padding:30px;
 }
 
-.secondary{
-background:white;
-color:#111827;
-border:1px solid #dbe3ec;
+.message{
+    font-size:16px;
 }
 
-.secondary:hover{
-background:#f1f5f9;
-}
-
-.right{
-flex:1;
-display:flex;
-justify-content:center;
-}
-
-.box{
-background:white;
-padding:40px;
-border-radius:20px;
-box-shadow:0 20px 60px rgba(0,0,0,.08);
-width:100%;
-max-width:420px;
-}
-
-.box h3{
-margin-bottom:25px;
-font-size:24px;
-}
-
-.item{
-display:flex;
-justify-content:space-between;
-padding:15px 0;
-border-bottom:1px solid #eee;
-}
-
-.item:last-child{
-border:none;
-}
-
-.features{
-width:90%;
-max-width:1200px;
-margin:50px auto;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-}
-
-.card{
-background:white;
-padding:30px;
-border-radius:18px;
-box-shadow:0 15px 40px rgba(0,0,0,.06);
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-}
-
-.card h3{
-margin-bottom:10px;
-}
-
-.card p{
-font-size:15px;
-margin:0;
-}
-
-footer{
-margin-top:80px;
-padding:30px;
-text-align:center;
-color:#64748b;
-}
-
-@media(max-width:900px){
-
-.hero{
-flex-direction:column;
-text-align:center;
-padding:40px 0;
-}
-
-nav{
-flex-direction:column;
-gap:20px;
-}
-
-nav ul{
-gap:18px;
-flex-wrap:wrap;
-justify-content:center;
-}
-
-h1{
-font-size:38px;
+.signature h3{
+    font-size:32px;
 }
 
 }
-
 </style>
-
 </head>
 
 <body>
 
-<nav>
+<div class="container">
 
-<div class="logo">HAMIRB</div>
+<div class="letter">
 
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#">About</a></li>
-<li><a href="#">Vendors</a></li>
-<li><a href="#">Contact</a></li>
-</ul>
+<h1 class="title">My Dearest ❤️</h1>
 
-</nav>
-
-<section class="hero">
-
-<div class="left">
-
-<div class="badge">
-🚀 Launching Soon
-</div>
-
-<h1>
-Pakistan's Next<br>
-Multi Vendor Marketplace
-</h1>
+<div class="message">
 
 <p>
-HAMIRB is building a modern online marketplace where trusted sellers connect with customers across Pakistan.
-Simple, secure and designed for everyone.
+How are you? <span class="highlight">Kaisi ho?</span> Tabiyat theek hai?
+Khana khaya? Apna khayal rakh rahi ho?
+I know things aren't okay between us right now,
+but I still wanted to ask because,
+<span class="highlight">no matter what happens,
+I'll always care about you.</span>
 </p>
 
-<div class="buttons">
+<p>
+I'm truly sorry for hurting you.
+I know that <strong>"sorry"</strong> is only a word unless my actions prove it,
+and I understand if it's difficult for you to believe me right now.
+</p>
 
-<a href="#" class="btn primary">
-Coming Soon
-</a>
+<p>
+I miss you more than words can explain.
+I will never give up on us.
+As long as there's hope,
+I'll keep choosing you,
+believing in us,
+and praying that one day
+we'll find our way back to each other,
+<span class="highlight">Insha'Allah.</span>
+</p>
 
-<a href="mailto:hello@hamirb.com" class="btn secondary">
-Contact Us
-</a>
+<p>
+And whenever you're ready...
+I'll come.
+Not to argue,
+not to pressure you,
+but simply to see you,
+apologize from my heart,
+and hopefully take the first step
+toward fixing what I broke.
+</p>
 
+<div class="signature">
+<h3>With all my love,</h3>
+<p><strong>Always Us. ❤️</strong></p>
+<p>Forgive me.</p>
+<p>Want always being better for us.</p>
+</div>
+
+<div class="footer">
+❤️
 </div>
 
 </div>
 
-<div class="right">
-
-<div class="box">
-
-<h3>Why HAMIRB?</h3>
-
-<div class="item">
-<span>🛍 Trusted Sellers</span>
-<span>✔</span>
-</div>
-
-<div class="item">
-<span>🚚 Fast Delivery</span>
-<span>✔</span>
-</div>
-
-<div class="item">
-<span>💳 Secure Payments</span>
-<span>✔</span>
-</div>
-
-<div class="item">
-<span>⭐ Premium Experience</span>
-<span>✔</span>
 </div>
 
 </div>
-
-</div>
-
-</section>
-
-<section class="features">
-
-<div class="card">
-<h3>Trusted Vendors</h3>
-<p>Verified sellers with quality products and reliable service.</p>
-</div>
-
-<div class="card">
-<h3>Secure Shopping</h3>
-<p>Fast checkout and secure payment options for every order.</p>
-</div>
-
-<div class="card">
-<h3>Nationwide Delivery</h3>
-<p>Quick delivery across Pakistan with trusted logistics.</p>
-</div>
-
-</section>
-
-<footer>
-
-© 2026 <strong>HAMIRB</strong> • Building the Future of E-Commerce in Pakistan 🇵🇰
-
-</footer>
 
 </body>
 </html>
